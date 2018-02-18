@@ -68,7 +68,7 @@ install_python_version( )
     if [ $install_python = 'y' ]; then
       echo "Installing python2.7.."
       # if ! apt-get install python2.7; then
-      if ! dnf install python2.7; then
+      if ! dnf install python2; then
         error "Error installing python2.7 Aborting.."
       fi
     else
