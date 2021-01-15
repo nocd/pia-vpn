@@ -141,7 +141,7 @@ parse_server_info( )
   echo 'Loading servers information..'
   json=`wget -q -O - 'http://privateinternetaccess.com/vpninfo/servers?version=24' | head -1`
 
-  python > $SERVER_INFO <<EOF
+  python2.7 > $SERVER_INFO <<EOF
 payload = '$json'
 import json
 d = json.loads(payload)
