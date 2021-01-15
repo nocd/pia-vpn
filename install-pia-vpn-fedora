@@ -62,7 +62,7 @@ verify_running_as_root( )
 install_python_version( )
 {
 #  if ! dpkg -l python2.7 | grep '^ii' > /dev/null ; then
-  if ! dnf list installed python | grep python > /dev/null ; then
+  if ! dnf list installed python2.7 | grep python > /dev/null ; then
     echo -n 'Package python2.7 required. Install? (y/n): '
     read install_python
     if [ $install_python = 'y' ]; then
